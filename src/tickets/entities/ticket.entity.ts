@@ -3,9 +3,11 @@ import {
   PrimaryGeneratedColumn,
   Column,
   CreateDateColumn,
-  UpdateDateColumn, ManyToOne, OneToMany
-} from "typeorm";
-import { User } from "../../users/entities/user.entity";
+  UpdateDateColumn,
+  ManyToOne,
+  OneToMany,
+} from 'typeorm';
+import { User } from '../../users/entities/user.entity';
 
 @Entity('tickets')
 export class Ticket {

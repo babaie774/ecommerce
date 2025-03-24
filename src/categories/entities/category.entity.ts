@@ -1,12 +1,19 @@
-import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn, UpdateDateColumn, ManyToMany } from "typeorm";
-import { Product } from "../../products/entities/product.entity";
+import {
+  Column,
+  CreateDateColumn,
+  Entity,
+  PrimaryGeneratedColumn,
+  UpdateDateColumn,
+  ManyToMany,
+} from 'typeorm';
+import { Product } from '../../products/entities/product.entity';
 
 @Entity('categories')
 export class Category {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({nullable: false})
+  @Column({ nullable: false })
   title: string;
 
   @CreateDateColumn()

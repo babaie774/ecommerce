@@ -1,8 +1,18 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete, Res, HttpStatus } from "@nestjs/common";
+import {
+  Controller,
+  Get,
+  Post,
+  Body,
+  Patch,
+  Param,
+  Delete,
+  Res,
+  HttpStatus,
+} from '@nestjs/common';
 import { TicketsService } from './tickets.service';
 import { CreateTicketDto } from './dto/create-ticket.dto';
 import { UpdateTicketDto } from './dto/update-ticket.dto';
-import { Response } from "express";
+import { Response } from 'express';
 
 @Controller('tickets')
 export class TicketsController {
@@ -15,8 +25,8 @@ export class TicketsController {
     return res.status(HttpStatus.OK).json({
       statusCode: HttpStatus.OK,
       data: newTicket,
-      message: "تیکت با موفقیت ثبت شد"
-    })
+      message: 'تیکت با موفقیت ثبت شد',
+    });
   }
 
   @Get()
@@ -26,8 +36,8 @@ export class TicketsController {
     return res.status(HttpStatus.OK).json({
       statusCode: HttpStatus.OK,
       data: tickets,
-      message: "لیست تیکت ها با موفقیت دریافت شد"
-    })
+      message: 'لیست تیکت ها با موفقیت دریافت شد',
+    });
   }
 
   @Get(':id')
@@ -37,8 +47,8 @@ export class TicketsController {
     return res.status(HttpStatus.OK).json({
       statusCode: HttpStatus.OK,
       data: ticket,
-      message: "تیکت با موفقیت دریافت شد"
-    })
+      message: 'تیکت با موفقیت دریافت شد',
+    });
   }
   //
   // @Patch(':id')

@@ -9,7 +9,12 @@ import { UsersModule } from 'src/users/users.module';
 import { AddressModule } from 'src/address/address.module';
 
 @Module({
-  imports: [TypeOrmModule.forFeature([Order, OrderItem]), ProductsModule, UsersModule, AddressModule],
+  imports: [
+    TypeOrmModule.forFeature([Order, OrderItem]),
+    ProductsModule,
+    UsersModule,
+    AddressModule,
+  ],
   controllers: [OrdersController],
   providers: [OrdersService],
 })

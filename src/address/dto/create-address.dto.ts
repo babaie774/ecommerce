@@ -1,9 +1,4 @@
-import {
-  IsString,
-  IsNotEmpty,
-  Length,
-  IsOptional,
-} from 'class-validator';
+import { IsString, IsNotEmpty, Length, IsOptional } from 'class-validator';
 
 export class CreateAddressDto {
   @IsNotEmpty({ message: 'id کاربر نمیتواند خالی باشد' })

@@ -46,7 +46,7 @@ export class OrdersService {
 
         const orderItem = this.orderItemRepository.create({
           order: savedOrder,
-          product
+          product,
         });
 
         return this.orderItemRepository.save(orderItem);
@@ -59,7 +59,9 @@ export class OrdersService {
   }
 
   async findAll(): Promise<Order[]> {
-    return this.orderRepository.find({ relations: ['user', 'address', 'items', 'items.product'] });
+    return this.orderRepository.find({
+      relations: ['user', 'address', 'items', 'items.product'],
+    });
   }
 
   async findOne(id: number): Promise<Order> {
@@ -94,7 +96,9 @@ export class OrdersService {
     }
 
     if (updateOrderDto.addressId) {
-      const address = await this.addressService.findOne(updateOrderDto.addressId);
+      const address = await this.addressService.findOne(
+        updateOrderDto.addressId,
+      );
       order.address = address;
     }
 

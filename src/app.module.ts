@@ -15,8 +15,8 @@ import { OrdersModule } from './orders/orders.module';
   imports: [
     // Config
     ConfigModule.forRoot({
-      isGlobal: true
-    }), 
+      isGlobal: true,
+    }),
 
     // DB Connection
     TypeOrmModule.forRoot({
@@ -27,11 +27,17 @@ import { OrdersModule } from './orders/orders.module';
       password: process.env.DB_PASSWORD,
       database: process.env.DB_DATABASE,
       entities: [__dirname + '/**/entities/*.entity{.ts,.js}'],
-      synchronize: true
-    }), 
-    
+      synchronize: true,
+    }),
+
     // Modules
-    UsersModule, AuthModule, AddressModule, TicketsModule, ProductsModule, CategoriesModule, OrdersModule
+    UsersModule,
+    AuthModule,
+    AddressModule,
+    TicketsModule,
+    ProductsModule,
+    CategoriesModule,
+    OrdersModule,
   ],
   controllers: [AppController],
   providers: [AppService],

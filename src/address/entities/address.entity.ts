@@ -1,8 +1,15 @@
-import { Column, CreateDateColumn, Entity, ManyToOne, OneToMany, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
-import { CreateUserDto } from "../../users/dto/create-user.dto";
-import { User } from "../../users/entities/user.entity";
-import { Order } from "src/orders/entities/order.entity";
-
+import {
+  Column,
+  CreateDateColumn,
+  Entity,
+  ManyToOne,
+  OneToMany,
+  PrimaryGeneratedColumn,
+  UpdateDateColumn,
+} from 'typeorm';
+import { CreateUserDto } from '../../users/dto/create-user.dto';
+import { User } from '../../users/entities/user.entity';
+import { Order } from 'src/orders/entities/order.entity';
 
 @Entity('addresses')
 export class Address {
@@ -30,7 +37,7 @@ export class Address {
   @ManyToOne(() => User, (user) => user.addresses)
   user: User;
 
-  @OneToMany(() => Order, order => order.address)
+  @OneToMany(() => Order, (order) => order.address)
   orders: Order[];
 
   @CreateDateColumn()
