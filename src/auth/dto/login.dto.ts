@@ -1,11 +1,5 @@
-import {
-  IsNotEmpty,
-  IsString,
-  Matches,
-  MaxLength,
-  MinLength,
-} from 'class-validator';
 import { Transform } from 'class-transformer';
+import { IsNotEmpty, IsString, Matches, MaxLength } from 'class-validator';
 
 export class LoginDto {
   @IsString({ message: 'موبایل باید یک رشته باشد' })

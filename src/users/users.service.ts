@@ -66,7 +66,7 @@ export class UsersService {
   }
 
   async update(id: number, updateUserDto: UpdateUserDto) {
-    const user = await this.findOne(id);
+    // const user = await this.findOne(id);
 
     try {
       await this.userRepository.update(id, {

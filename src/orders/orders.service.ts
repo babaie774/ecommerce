@@ -1,16 +1,13 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
+import { AddressService } from 'src/address/address.service';
+import { ProductsService } from 'src/products/products.service';
+import { UsersService } from 'src/users/users.service';
 import { Repository } from 'typeorm';
 import { CreateOrderDto } from './dto/create-order.dto';
 import { UpdateOrderDto } from './dto/update-order.dto';
-import { Order } from './entities/order.entity';
 import { OrderItem } from './entities/order-item.entity';
-import { User } from '../users/entities/user.entity';
-import { Address } from '../address/entities/address.entity';
-import { Product } from '../products/entities/product.entity';
-import { UsersService } from 'src/users/users.service';
-import { AddressService } from 'src/address/address.service';
-import { ProductsService } from 'src/products/products.service';
+import { Order } from './entities/order.entity';
 import { OrderStatus } from './enums/order-status.enum';
 
 @Injectable()

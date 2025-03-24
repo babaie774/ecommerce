@@ -1,19 +1,18 @@
 import {
-  Controller,
-  Get,
-  Post,
   Body,
-  Patch,
-  Param,
+  Controller,
   Delete,
-  Res,
+  Get,
   HttpStatus,
+  Param,
+  Post,
   Put,
+  Res,
 } from '@nestjs/common';
+import { Response } from 'express';
 import { AddressService } from './address.service';
 import { CreateAddressDto } from './dto/create-address.dto';
 import { UpdateAddressDto } from './dto/update-address.dto';
-import { Response } from 'express';
 
 @Controller('address')
 export class AddressController {

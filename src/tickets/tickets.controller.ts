@@ -1,18 +1,15 @@
 import {
+  Body,
   Controller,
   Get,
-  Post,
-  Body,
-  Patch,
-  Param,
-  Delete,
-  Res,
   HttpStatus,
+  Param,
+  Post,
+  Res,
 } from '@nestjs/common';
-import { TicketsService } from './tickets.service';
-import { CreateTicketDto } from './dto/create-ticket.dto';
-import { UpdateTicketDto } from './dto/update-ticket.dto';
 import { Response } from 'express';
+import { CreateTicketDto } from './dto/create-ticket.dto';
+import { TicketsService } from './tickets.service';
 
 @Controller('tickets')
 export class TicketsController {

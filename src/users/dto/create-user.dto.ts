@@ -4,10 +4,8 @@ import {
   IsNotEmpty,
   IsOptional,
   IsString,
-  Length,
   Matches,
   MaxLength,
-  MinLength,
 } from 'class-validator';
 import UserRoleEnum from '../enums/userRoleEnum';
 

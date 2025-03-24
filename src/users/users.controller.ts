@@ -1,21 +1,20 @@
 import {
-  Controller,
-  Get,
-  Post,
   Body,
-  Patch,
-  Param,
+  Controller,
   Delete,
-  Res,
+  Get,
   HttpStatus,
-  Query,
+  Param,
+  Post,
   Put,
+  Query,
+  Res,
 } from '@nestjs/common';
-import { UsersService } from './users.service';
+import { Response } from 'express';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
-import { Response } from 'express';
 import UserRoleEnum from './enums/userRoleEnum';
+import { UsersService } from './users.service';
 
 @Controller('users')
 export class UsersController {
